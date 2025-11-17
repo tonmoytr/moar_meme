@@ -11,16 +11,19 @@ export default function Hero() {
         minHeight: "100vh",
         // sharp 50/50 split (top yellow, bottom teal)
         background:
-          "linear-gradient(to bottom, #ffc502 0%, #ffc502 50%, #0FB5B3 50%, #0FB5B3 100%)",
+          "linear-gradient(to bottom, #ffc502 0%, #ffc502 50%, #ffc502 50%, #ffc502 100%)",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid min-h-screen grid-cols-1 md:grid-cols-2 items-center gap-6 px-4 sm:px-6 lg:px-8">
           {/* Left: Text */}
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
-            <h1 className="text-4xl  font-semibold leading-tight sm:text-5xl md:text-9xl md:font-bold">
-              MOAR
+            <h1 className="text-4xl  font-semibold leading-tight sm:text-5xl md:text-4xl md:font-light w-1/2 bg-white border border-black text-center mb-8">
+              BNB CHAIN
             </h1>
+            <h2 className="text-4xl  font-semibold leading-tight sm:text-5xl md:text-9xl md:font-bold">
+              MOAR
+            </h2>
 
             <p className="mt-4 max-w-xl sm:text-lg md:text-2xl font-normal">
               Work Hard and Build Harder! <br />
