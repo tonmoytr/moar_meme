@@ -43,21 +43,21 @@ export default function Hero() {
             variants={fadeUp}
             className="flex flex-col items-center text-center md:items-start md:text-left"
           >
-            <h1 className="text-4xl  font-semibold leading-tight sm:text-5xl md:text-4xl md:font-light w-1/2 bg-white border border-black text-center mb-8">
+            <h1 className="text-3xl mt-10 md:0 font-semibold leading-tight  md:text-4xl md:font-light w-1/2 bg-white border border-black text-center mb-8">
               BNB CHAIN
             </h1>
-            <h2 className="text-4xl  font-semibold leading-tight sm:text-5xl md:text-9xl md:font-bold">
+            <h2 className="text-6xl  font-semibold leading-tight md:text-9xl md:font-bold">
               MOAR
             </h2>
 
-            <p className="mt-4 max-w-xl sm:text-lg md:text-2xl font-normal">
+            <p className="mt-4 max-w-xl text-xl md:text-2xl font-normal">
               Work Hard and Build Harder! <br />
               Moar - A strong narrative given by BNB Chain, created by Joan
               Cornellà.
             </p>
 
             {/* CTAs */}
-            <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3 ">
               <Link
                 href="/how-to-buy"
                 className="px-5 py-3 text-xl font-semibold bg-black text-white rounded-none hover:opacity-90 transition-opacity"

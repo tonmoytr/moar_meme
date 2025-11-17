@@ -67,7 +67,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-8 max-w-xl leading-relaxed text-[15px] sm:text-base opacity-95">
+            <div className="mt-8 max-w-xl leading-relaxed text-lg opacity-95">
               <p>
                 Moar is a meme character by the famous artist Joan Cornella,
                 known for dark humor and simple but bold messages. Today, BNB
