@@ -52,8 +52,24 @@ export default function Hero() {
 
             <p className="mt-4 md:my-12 max-w-xl text-xl md:text-2xl font-normal">
               Work Hard and Build Harder! <br />
-              Moar - A strong narrative given by BNB Chain, created by Joan
-              Cornellà.
+              Moar - A strong narrative given by{" "}
+              <a
+                href="https://x.com/BNBCHAINZH/status/1990368056653324548"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-1 underline-offset-2 hover:opacity-80 transition-opacity"
+              >
+                BNB Chain
+              </a>{" "}
+              , created by{" "}
+              <a
+                href="https://x.com/sirjoancornella/status/1503715108811280388?s=20"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-1 underline-offset-2 hover:opacity-80 transition-opacity"
+              >
+                Joan Cornellà
+              </a>
             </p>
 
             {/* CTAs */}

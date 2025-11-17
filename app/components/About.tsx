@@ -53,7 +53,7 @@ export default function About() {
           </motion.div>
 
           {/* RIGHT: TEXT */}
-          <motion.div variants={fadeUp} className="text-[#111] mt-2 md:mt-32">
+          <motion.div variants={fadeUp} className="text-[#111] mt-2 md:mt-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
               ABOUT $MOAR
             </h2>
@@ -71,16 +71,15 @@ export default function About() {
               </p>
             </div> */}
 
-            <div className=" mt-8 md:mt-16 max-w-xl leading-relaxed text-lg opacity-95">
+            <div className=" mt-4 md:mt-12 max-w-xl leading-relaxed text-lg opacity-95">
               <p className="text-2xl font-normal tracking-wide leading-12">
-                Moar is a meme created by the famous artist Joan Cornella,
-                known for dark humor and simple but bold messages. Today, BNB
-                Chain posted Moar with the slogan “Work Hard — Build Harder.”
-              </p>
-              {/* <p className="mt-4">
+                Moar is a meme created by the famous artist Joan Cornella, known
+                for dark humor and simple but bold messages. Today, BNB Chain
+                posted Moar with the slogan “Work Hard — Build Harder.”
+                <br /> <br />
                 It’s a fun way to remind the community that memes can inspire
                 real building.
-              </p> */}
+              </p>
             </div>
           </motion.div>
         </motion.div>
