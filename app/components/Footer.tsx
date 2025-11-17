@@ -25,7 +25,7 @@ export default function Footer() {
         {/* Social icons */}
         <div className="flex items-center justify-center gap-5 mt-2">
           <Link
-            href="https://t.me/"
+            href="https://t.me/MOARBSC"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 w-10 items-center justify-center border border-black rounded-none bg-white hover:bg-black hover:text-white transition-colors"
@@ -42,7 +42,7 @@ export default function Footer() {
           </Link>
 
           <Link
-            href="https://x.com/"
+            href="https://x.com/Moar_bnb"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 w-10 items-center justify-center border border-black rounded-none bg-white hover:bg-black hover:text-white transition-colors"

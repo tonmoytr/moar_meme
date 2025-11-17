@@ -27,7 +27,7 @@ export default function Hero() {
         minHeight: "100vh",
         // sharp 50/50 split (top yellow, bottom teal)
         background:
-          "linear-gradient(to bottom, #ffc502 0%, #ffc502 50%, #ffc502 50%, #ffc502 100%)",
+          "linear-gradient(to bottom, #F69CA0 0%, #F69CA0 50%, #F69CA0 50%, #F69CA0 100%)",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,16 +41,16 @@ export default function Hero() {
           {/* Left: Text */}
           <motion.div
             variants={fadeUp}
-            className="flex flex-col items-center text-center md:items-start md:text-left"
+            className="flex flex-col items-center text-center md:items-start md:text-left mt-0 md:-mt-32"
           >
-            <h1 className="text-3xl mt-10 md:0 font-semibold leading-tight  md:text-4xl md:font-light w-1/2 bg-white border border-black text-center mb-8">
+            {/* <h1 className="text-3xl mt-10 md:0 font-semibold leading-tight  md:text-4xl md:font-light w-1/2 bg-white border border-black text-center mb-8">
               BNB CHAIN
-            </h1>
-            <h2 className="text-6xl  font-semibold leading-tight md:text-9xl md:font-bold">
+            </h1> */}
+            <h1 className="text-6xl  font-semibold leading-tight md:text-9xl md:font-bold">
               MOAR
-            </h2>
+            </h1>
 
-            <p className="mt-4 max-w-xl text-xl md:text-2xl font-normal">
+            <p className="mt-4 md:my-12 max-w-xl text-xl md:text-2xl font-normal">
               Work Hard and Build Harder! <br />
               Moar - A strong narrative given by BNB Chain, created by Joan
               Cornellà.
@@ -59,13 +59,13 @@ export default function Hero() {
             {/* CTAs */}
             <div className="mt-6 flex flex-wrap items-center gap-3 ">
               <Link
-                href="/how-to-buy"
+                href="https://pancakeswap.finance/info/pairs/0x7c3f57f714ee1fa0bb76911a18684bef8c624122"
                 className="px-5 py-3 text-xl font-semibold bg-black text-white rounded-none hover:opacity-90 transition-opacity"
               >
-                How to Buy
+                Buy Now
               </Link>
               <Link
-                href="https://www.dextools.io/"
+                href="https://www.dextools.io/app/en/bnb/pair-explorer/0x7c3f57f714ee1fa0bb76911a18684bef8c624122?t=1763405710539"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-3 text-xl font-semibold bg-black text-white rounded-none hover:opacity-90 transition-opacity"
@@ -75,7 +75,7 @@ export default function Hero() {
 
               {/* Socials */}
               <Link
-                href="https://t.me/"
+                href="https://t.me/MOARBSC"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Telegram"
@@ -94,7 +94,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="https://x.com/"
+                href="https://x.com/Moar_bnb"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X"
@@ -122,7 +122,7 @@ export default function Hero() {
             {/* Replace /hero-token.png with your asset */}
             <div className="relative aspect-square sm:w-80 lg:w-md">
               <Image
-                src="/assets/hero.jpeg"
+                src="/assets/hero.png"
                 alt="MOAR Token"
                 width="650"
                 height="800"

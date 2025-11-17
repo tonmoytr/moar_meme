@@ -15,7 +15,7 @@ export function MoarNavbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-black/10 bg-[#ffc502] backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-black/10 bg-[#F69CA0] backdrop-blur">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
         {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -27,7 +27,7 @@ export function MoarNavbar() {
             height={40}
             className="object-contain"
           />
-          <span className="text-lg font-semibold tracking-wide">MOAR</span>
+          {/* <span className="text-lg font-semibold tracking-wide">MOAR</span> */}
         </Link>
 
         {/* Right: Desktop menu */}
@@ -43,7 +43,7 @@ export function MoarNavbar() {
           ))}
 
           <Link
-            href="dexslink"
+            href="https://dexscreener.com/bsc/0x7c3f57f714ee1fa0bb76911a18684bef8c624122"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 text-sm font-semibold bg-black text-white rounded-none hover:opacity-90 transition-opacity"

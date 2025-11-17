@@ -7,7 +7,7 @@ interface CardProps {
   value: string;
 }
 
-const CA = "0x00000000000000000000";
+const CA = "0x498C0ae41f6c9eBAc59498d932ECECDf33D14444";
 
 export default function Tokenomics() {
   const [copied, setCopied] = useState(false);
