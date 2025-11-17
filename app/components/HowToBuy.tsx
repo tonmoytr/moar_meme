@@ -1,6 +1,21 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
+
+import type { Variants } from "framer-motion";
+
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 const STEPS = [
   {
@@ -31,16 +46,29 @@ export default function HowToBuy() {
   const toggle = (idx: number) => setOpen((cur) => (cur === idx ? -1 : idx));
 
   return (
-    <section id="howtobuy"
+    <section
+      id="howtobuy"
       className="py-16 md:py-24"
       style={{ backgroundColor: "#F69CA0" }} // same as About
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <h2 className="text-center text-4xl md:text-5xl font-extrabold tracking-tight">
+        <motion.h2
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="text-center text-4xl md:text-5xl font-extrabold tracking-tight"
+        >
           HOW TO BUY
-        </h2>
+        </motion.h2>
 
-        <div className="mt-10 space-y-4 md:space-y-2">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="mt-10 space-y-4 md:space-y-2"
+        >
           {STEPS.map((item, idx) => {
             const isOpen = open === idx;
             return (
@@ -72,7 +100,7 @@ export default function HowToBuy() {
               </div>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Optional tiny footer note (replace with token CA if you want) */}
         {/* <p className="mt-6 text-center text-sm opacity-70">

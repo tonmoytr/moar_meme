@@ -1,7 +1,23 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { stagger } from "./anim";
+
+import type { Variants } from "framer-motion";
+
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function Hero() {
   return (
@@ -15,9 +31,18 @@ export default function Hero() {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid min-h-screen grid-cols-1 md:grid-cols-2 items-center gap-6 px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+          className="grid min-h-screen grid-cols-1 md:grid-cols-2 items-center gap-6 px-4 sm:px-6 lg:px-8"
+        >
           {/* Left: Text */}
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <motion.div
+            variants={fadeUp}
+            className="flex flex-col items-center text-center md:items-start md:text-left"
+          >
             <h1 className="text-4xl  font-semibold leading-tight sm:text-5xl md:text-4xl md:font-light w-1/2 bg-white border border-black text-center mb-8">
               BNB CHAIN
             </h1>
@@ -87,10 +112,13 @@ export default function Hero() {
                 </svg>
               </Link>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Image */}
-          <div className="flex items-center justify-center md:justify-end">
+          <motion.div
+            variants={fadeUp}
+            className="flex items-center justify-center md:justify-end"
+          >
             {/* Replace /hero-token.png with your asset */}
             <div className="relative aspect-square sm:w-80 lg:w-md">
               <Image
@@ -102,8 +130,8 @@ export default function Hero() {
                 priority
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

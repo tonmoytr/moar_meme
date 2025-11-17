@@ -1,6 +1,21 @@
+"use client";
 
-
+import { motion } from "framer-motion";
 import Image from "next/image";
+
+import type { Variants } from "framer-motion";
+
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 const IMAGES = [
   "/assets/gallery/g1.png",
@@ -13,18 +28,26 @@ const IMAGES = [
 
 export default function Gallery() {
   return (
-    <section id="gallery"
+    <section
+      id="gallery"
       className="py-16 md:py-24"
       style={{ backgroundColor: "#F69CA0" }} // same as About
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-3xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight">
+        <motion.h2
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="text-center text-3xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight"
+        >
           LEGENDARY ARTWORKS
-        </h2>
+        </motion.h2>
 
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {IMAGES.map((src, i) => (
-            <figure
+            <motion.figure
+              variants={fadeUp}
               key={i}
               className="
                 group relative bg-white
@@ -46,7 +69,7 @@ export default function Gallery() {
                   priority={i < 3}
                 />
               </div>
-            </figure>
+            </motion.figure>
           ))}
         </div>
       </div>

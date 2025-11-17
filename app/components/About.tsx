@@ -1,16 +1,40 @@
+"use client"
 
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { stagger } from "./anim";
+
+import type { Variants } from "framer-motion";
+
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function About() {
   return (
-    <section id="about"
+    <section
+      id="about"
       className="py-16 md:py-24"
       style={{ backgroundColor: "#F69CA0" }} // salmon-pink like the reference
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-16">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={stagger}
+          className="grid items-center gap-10 md:grid-cols-2 lg:gap-16"
+        >
           {/* LEFT: IMAGE */}
-          <div className="flex justify-center md:justify-start">
+          <motion.div variants={fadeUp} className="flex justify-center md:justify-start">
             {/* Replace /about-building.png with your image */}
             <div className="relative w-[18rem] sm:w-88 lg:w-md aspect-3/5">
               <Image
@@ -22,10 +46,10 @@ export default function About() {
                 priority
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT: TEXT */}
-          <div className="text-[#111]">
+          <motion.div variants={fadeUp} className="text-[#111]">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
               BE A “MOAR” GUEST!
             </h2>
@@ -55,7 +79,10 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-10 flex items-center gap-3 text-xl sm:text-2xl font-extrabold">
+            <motion.div
+              variants={fadeUp}
+              className="mt-10 flex items-center gap-3 text-xl sm:text-2xl font-extrabold"
+            >
               {/* pin icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,9 +94,9 @@ export default function About() {
                 <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" />
               </svg>
               <span>0 Moar Street, METAVERSE</span>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
