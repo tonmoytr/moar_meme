@@ -122,7 +122,7 @@ export default function Hero() {
             {/* Replace /hero-token.png with your asset */}
             <div className="relative aspect-square sm:w-80 lg:w-md">
               <Image
-                src="/assets/hero.png"
+                src="/assets/hero.jpeg"
                 alt="MOAR Token"
                 width="650"
                 height="800"

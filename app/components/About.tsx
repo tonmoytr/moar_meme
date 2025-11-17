@@ -73,7 +73,7 @@ export default function About() {
 
             <div className=" mt-8 md:mt-16 max-w-xl leading-relaxed text-lg opacity-95">
               <p className="text-2xl font-normal tracking-wide leading-12">
-                Moar is a meme character by the famous artist Joan Cornella,
+                Moar is a meme created by the famous artist Joan Cornella,
                 known for dark humor and simple but bold messages. Today, BNB
                 Chain posted Moar with the slogan “Work Hard — Build Harder.”
               </p>
